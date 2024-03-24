@@ -1,0 +1,138 @@
+*{
+    margin:0%;
+    padding:0% 
+}
+body{
+    font-family:'roboto',sans-serif;
+    background-color: rgb(217,217,217);
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background-color: #fff;
+    padding:10px;
+}
+
+.innerHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+.searchbx{
+    display: flex;
+    gap: 4px;
+}
+
+.searchbx input{
+    height: 40px;
+    max-width: 200px ;
+    width: 100%;
+    padding:0 10px;
+    border: none;
+    background-color: rgb(217,217,217);
+}
+
+input:focus{
+    outline: none;
+    border-bottom: 2px solid #8A33FF;
+}
+.searchbx button{
+    height: 40px;
+    width: 40px;
+    background-color: #8A33FF;
+    border : none;
+    color: #fff;
+}
+
+.catagories{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 890px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.catagories button{
+    width: 24%;
+    background-color: #D7B9FF ;
+    border: none;
+    opacity: 0.7;
+    color: #000;
+    height: 40px;
+}
+
+.catagories button:hover{
+    opacity: 1;
+}
+.news-card{
+
+    max-width: 350px;
+    background-color: white;
+    padding: 12px;
+    min-height: 320px;
+}
+
+.news-card img{
+    width: 100%;
+
+}
+
+.news-card h2{
+    font-size: 24px;
+    margin: 10px 0;
+
+}
+
+.news-card p{
+    opacity: 0.7;
+    font-size: 14px;
+
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12px;
+}
+
+.main .newsgallery{
+    display: flex;
+    gap: 20px;
+    max-width: 1140px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (max-width :400px){
+    .innerHeader{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width :335px){
+    .innerHeader{
+        justify-content: center;
+    }
+    .catagories button{
+        font-size: 12px;
+    }
+}
