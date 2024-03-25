@@ -17,16 +17,23 @@ const onLoad = async (inpt) => {
     let res = await fetch(`https://newsapi.org/v2/everything?q=${inpt}&apiKey=${key}`);
     let jsondata = await res.json();
 
-    let articles = jsondata.articles
-    console.log(articles)
-
-    if(articles.length != 0 ){
-        printData(articles)
+    if(jsondata.status === "ok"){
+            let articles = jsondata.articles
+        console.log(articles)
+    
+        if(articles.length != 0 ){
+            printData(articles)
+        }else{
+            newsgallery.innerHTML = ""
+    
+            newsgallery.innerHTML =  "<h1>Something went wrong</h1>"
+        }
     }else{
-        newsgallery.innerHTML = ""
-
-        newsgallery.innerHTML =  "<h1>Something went wrong</h1>"
+         newsgallery.innerHTML = ""
+         newsgallery.innerHTML =  `<h1>${jsondata.message}</h1>`
     }
+    
+
 }
 
 onLoad("india")
