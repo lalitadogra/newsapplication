@@ -14,15 +14,17 @@ const printData = (data) => {
 }
 
 const onLoad = async (inpt) => {
-    let res = await fetch(`https://newsapi.org/v2/everything?q=${inpt}&apiKey=${key}`, {
-          mode: "cors",
-        domains: 'https://lalita-news.netlify.app/',
-         headers: {
-          "Content-Type": "application/json",
-             
-          // 'Content-Type': 'application/x-www-form-urlencoded',
-        },
+   let res = await fetch(`https://newsapi.org/v2/everything?q=${inpt}&apiKey=${key}`, {
+  method: "GET", // or 'POST' if required
+  mode: "cors",
+  headers: {
+    "Content-Type": "application/json",
+    // Add any other headers if required
+  },
+domains: 'https://lalita-news.netlify.app/',
+       
     });
+
     let jsondata = await res.json();
 
     if(jsondata.status === "ok"){
