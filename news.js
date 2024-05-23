@@ -1,7 +1,6 @@
 let key = "d079c18ca14bca2db5403997036a1a1f";
 let newsgallery = document.getElementById("newsgallery")
-apikey = 'API_KEY';
-url = 'https://gnews.io/api/v4/search?q=example&lang=en&country=us&max=10&apikey=' + apikey;
+
 
 const printData = (data) => {
     newsgallery.innerHTML = ""
