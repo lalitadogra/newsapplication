@@ -16,8 +16,6 @@ const printData = (data) => {
 const onLoad = async (inpt) => {
     let res = await fetch(`https://gnews.io/api/v4/search?q=${inpt}&lang=en&max=10&apikey=${key}`);
     let jsondata = await res.json();
-
-
     console.log(jsondata);
     if(jsondata){
 
@@ -40,6 +38,8 @@ const onLoad = async (inpt) => {
     
 
 }
+}
+
 
 onLoad("india")
 
