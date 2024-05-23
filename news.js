@@ -18,8 +18,12 @@ const onLoad = async (inpt) => {
     let res = await fetch(`https://gnews.io/api/v4/search?q=${inpt}&lang=en&max=10&apikey=${key}`);
     let jsondata = await res.json();
 
+<<<<<<< HEAD
     console.log(jsondata);
     if(jsondata){
+=======
+    if(jsondata.status === "ok"){
+>>>>>>> 78f59d99f7dfd97f550ce73561422774d4f7c2ca
             let articles = jsondata.articles
         console.log(articles)
     
